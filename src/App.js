@@ -1,13 +1,11 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
+import Banner from "./components/Banner";
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+    <div className="app-container">
+      <Banner />;
     </div>
   );
 }

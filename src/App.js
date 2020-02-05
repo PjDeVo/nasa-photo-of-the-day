@@ -3,6 +3,7 @@ import axios from "axios";
 import "./styles/App.css";
 import Banner from "./components/Banner";
 import Photo from "./components/Photo";
+import Buttons from "./components/Buttons";
 
 function App() {
   const [photoData, setPhotoData] = useState(
@@ -14,7 +15,7 @@ function App() {
       .get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
       .then(response => {
         console.log("here is the data", response);
-        setPhotoData(response.data.hdurl);
+        setPhotoData(response.data.url);
       })
       .catch(error => {
         console.log(error);
@@ -25,6 +26,7 @@ function App() {
     <div className="app-container">
       <Banner />;
       <Photo img={photoData} />
+      <Buttons />
     </div>
   );
 }

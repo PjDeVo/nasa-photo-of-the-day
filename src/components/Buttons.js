@@ -1,13 +1,14 @@
 import React from "react";
+import { Button } from "reactstrap";
 
-function Buttons() {
+const Buttons = props => {
   return (
     <div className="buttons-container">
-      <button>Click Here To Change Photo to HD</button>
-      <button> Click Here To View Another Photo</button>
-      <button> Click Here to Do Something Else</button>
+      <Button color="success">Click Here To Change Photo to HD</Button>
+      <Button color="success"> Click Here To View Another Photo</Button>
+      <Button color="success"> Click Here to Do Something Else</Button>
     </div>
   );
-}
+};
 
 export default Buttons;
